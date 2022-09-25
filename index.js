@@ -46,53 +46,53 @@ const addToCart = async (page) => {
   await page.$eval('button[class="w_3 w_5 w_AA"]', (element) => {
     element.click();
   });
-  await delay(35000);
+  await delay(5000);
   await page.$eval('button[class="w_3 w_5 w_8 w_AA"]', (element) => {
     element.click();
   });
-  await delay(35000);
+  await delay(5000);
   await page.$eval('button[class="w_3 w_5 w_8 w_AA"]', (element) => {
     element.click();
   });
-  await delay(35000);
+  await delay(5000);
 };
 
 // Funtion to sign in with a face account
 
 const signIn = async (page) => {
-  await delay(35000);
+  await delay(5000);
   await page.type('input[id="email-split-screen"], omairkh007@gmail.com');
-  await delay(35000);
+  await delay(5000);
   await page.evaluate(() => {
     document.getElementsByClassName("button m-margin-top")[0].click();
   });
-  await delay(35000);
+  await delay(5000);
   await page.type('input[id="sign-in-password-no-otp"],AIYexpertsolutions1');
-  await delay(35000);
+  await delay(5000);
   await page.evaluate(() => {
     document.getElementsByClassName("button m-margin-top")[0].click();
   });
-  await delay(35000);
+  await delay(5000);
 };
 
 // CheckOut and go to payment function
 
 const checkOut = async () => {
-  await delay(35000);
+  await delay(5000);
   await page.type('input[id="addressLineOne"], 501 Frederick Rd');
-  await delay(35000);
+  await delay(5000);
   const input = await page.$("input[name='city']");
   await input.click({ clickCount: 3 });
   await input.type("Catonsville");
-  await delay(35000);
+  await delay(5000);
   const input2 = await page.$("input[name='postalCode']");
   await input2.click({ clickCount: 3 });
   await input2.type("21228");
-  await delay(35000);
+  await delay(5000);
   const input3 = await page.$("input[name='phone']");
   await input3.click({ clickCount: 3 });
   await input3.type("(717) 750-8296");
-  await delay(35000);
+  await delay(5000);
 };
 
 // payment Function
